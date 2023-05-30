@@ -9,7 +9,7 @@ const Issue_Return = () => {
     const dispatch = useDispatch();
       useEffect(()=>{
         dispatch(getAllIssuedBook())
-      },[])
+      },[dispatch])
 
 
 
@@ -18,7 +18,7 @@ const Issue_Return = () => {
     const filterOut = ()=>{
         const todayDate = moment(new Date()).format('YYYY-MM-DD');
         //console.log(todayDate)
-         filterd = all_IssuedBook && all_IssuedBook.filter(item =>  (item.updatedAt.slice(0,10) == todayDate))
+         filterd = all_IssuedBook && all_IssuedBook.filter(item =>  (item.updatedAt.slice(0,10) === todayDate))
         
     }
 

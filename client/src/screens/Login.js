@@ -43,7 +43,7 @@ Management System</p>
                     <br />
                     <div>
                         <input type="text"  style={{height:"60px",borderRadius:"20px"}}
-                        className="form-control" type={show} placeholder="password"
+                        className="form-control"  placeholder="password"
                          value={password} onChange={(e) => setPassword(e.target.value)} />
                         <i className="fas fa-eye"  onClick={() =>  handleShow()}></i>
                     </div>

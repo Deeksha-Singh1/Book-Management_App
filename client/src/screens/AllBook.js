@@ -3,6 +3,7 @@ import {getAllBook,filterBook, removeABook} from "../actions/book_action"
 import {issueABook,getAllIssuedBook} from "../actions/Issue_action"
 import { useDispatch, useSelector } from 'react-redux'
 import {Toast,Spinner} from "react-bootstrap"
+
 const AllBook = () => {
     const dispatch = useDispatch() ;
     const [searchKey,setSearchKey] = useState("")
@@ -125,7 +126,7 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
                  
                   {currentUser.user.isAdmin && (
                     //   <i className='fa fa-trash m-1' onClick={()=> console.log("okk")}></i>
-                     <button className="btn btn-danger"  onClick={() => dispatch(removeABook(book._id))}>Remove</button>
+                     <button className="btn btn-danger"  onClick={() =>  dispatch(removeABook(book._id))}>Remove</button>
                   )}
                   {!currentUser.user.isAdmin && (
                       <button  onClick={() => postData(book)} className={`btn btn-success`}>Issue</button>
