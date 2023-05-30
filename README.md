@@ -12,4 +12,4 @@ Features
 3. Delete Books: They can also Delete the information of existing books if needed(Only admin have the rights to delete the books).
 4. Manage students: Admin can delete the student profile.
 5. Book issue: Student can issue the book and a request is sent to admin and the book will be issued to the student.
-6. 
+6. Search books: User can search the books by typing the ame of the book
