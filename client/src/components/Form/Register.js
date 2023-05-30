@@ -57,7 +57,7 @@ const SignInForm = () => {
                         <div id="circle"></div>
                           <h1  style={{color:"black",marginLeft:"44px",marginTop:"-70px",fontSize:"45px"}}>LMS</h1>
                         </div>
-                        <p style={{color:"black",fontWeight:"800",textAlign:"center"}}>Welcome to Libary
+                        <p style={{color:"black",fontWeight:"800",textAlign:"center"}}>Welcome to Library
 Management System</p>
           
             <Form>
@@ -70,6 +70,7 @@ Management System</p>
                   className={
                     errors.name && touched.name ? "input-error" : null
                   }
+                  style={{color:"wheat"}}
                 />
                 <ErrorMessage name="name" component="span" className="error" />
               </div>
@@ -83,6 +84,7 @@ Management System</p>
                   className={
                     errors.email && touched.email ? "input-error" : null
                   }
+                  style={{color:"wheat"}}
                 />
                 <ErrorMessage name="email" component="span" className="error" />
               </div>
@@ -96,6 +98,7 @@ Management System</p>
                   className={
                     errors.password && touched.password ? "input-error" : null
                   }
+                  style={{color:"wheat"}}
                 />
                 <ErrorMessage
                   name="password"
@@ -112,6 +115,7 @@ Management System</p>
                   className={
                     errors.branch && touched.branch ? "input-error" : null
                   }
+                  style={{color:"wheat"}}
                 />
                 <ErrorMessage name="branch" component="span" className="error" />
               </div>
@@ -124,6 +128,7 @@ Management System</p>
                   className={
                     errors.branch && touched.branch ? "input-error" : null
                   }
+                  style={{color:"wheat"}}
                 />
                 <ErrorMessage name="roll_no" component="span" className="error" />
               </div>
@@ -137,6 +142,7 @@ Management System</p>
                   className={
                     errors.branch && touched.branch ? "input-error" : null
                   }
+                  style={{color:"wheat"}}
                 />
                 <ErrorMessage name="year" component="span" className="error" />
               </div>
@@ -154,7 +160,7 @@ Management System</p>
             <Link to="/login" 
              style={{
                fontFamily:"sans-serif",color:"black",textDecoration:"none",fontSize:"20px"}}>
-                 If You have account then plz login</Link>
+                 Click here to login</Link>
             </div>
            
           </div>
