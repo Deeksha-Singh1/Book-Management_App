@@ -9,12 +9,11 @@ const UserIssuedBook = () => {
     const dispatch = useDispatch();
       useEffect(()=>{
         dispatch(getUserIssuedBook())
-      },[])
+      },[dispatch])
       const [show, setShow] = useState(false);
       const [date,setDate] = useState(null)
-      const [dateTo,setDateTo] = useState(null)
       const handleClose = () => setShow(false);
-      const handleShow = () => setShow(true);
+   
       
     const {userIssuedBook} = useSelector(state => state.userIssuedBookReducer)
     const {singleIsBook} = useSelector(state => state.singleIssuedBookReducer)
@@ -34,7 +33,6 @@ const UserIssuedBook = () => {
      }
     var dateFrom ;
     var dayDiff ;
-    const now = new Date()
   if(date){
     //dateFrom = moment(date + 7 * 24 * 3600 * 1000).format('YYYY-MM-DD');
     var result = new Date(date) ;

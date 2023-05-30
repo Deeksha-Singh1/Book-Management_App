@@ -6,7 +6,7 @@ const UserHome = () => {
     const dispatch = useDispatch() ;
     useEffect(()=>{
         dispatch(userProfile())
-    },[])
+    },[dispatch])
     const {currentUser} = useSelector(state => state.userProfileReducer) ;
     console.log("UserHome",currentUser)
     return (

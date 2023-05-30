@@ -59,3 +59,22 @@ export const filterBook = (searchKey)=> async dispatch =>{
        })
     }
 }
+
+export const removeABook = (postId)=> async dispatch =>{
+
+   
+ 
+    try {
+         await axios.post('/api/books/removeBook',{postId});
+        const response2 = await axios.get(`/api/books/allBook`);
+       
+        dispatch({
+            type:'GET_BOOK_SUCCESS',
+            payload:response2.data
+        })
+      } catch (error) {
+        console.log(error);
+      }
+  
+    
+}

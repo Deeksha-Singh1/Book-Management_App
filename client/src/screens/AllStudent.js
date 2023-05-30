@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useEffect} from 'react';
 import {getAllStudent,removeAStudent} from "../actions/user_action"
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -6,7 +6,7 @@ const AllStudent = () => {
     const dispatch = useDispatch()
     useEffect(()=> {
         dispatch(getAllStudent())
-    },[])
+    },[dispatch])
    const {students} = useSelector(state => state.getAllStudentReducer)
    const filterStudent = students && students.filter(item => !item.isAdmin)
     return (

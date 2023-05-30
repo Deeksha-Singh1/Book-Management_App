@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import {getAllBook,filterBook} from "../actions/book_action"
+import {getAllBook,filterBook, removeABook} from "../actions/book_action"
 import {issueABook,getAllIssuedBook} from "../actions/Issue_action"
 import { useDispatch, useSelector } from 'react-redux'
 import {Toast,Spinner} from "react-bootstrap"
@@ -13,7 +13,7 @@ const AllBook = () => {
     useEffect(()=> {
         dispatch(getAllBook())
         dispatch(getAllIssuedBook())
-    },[show])
+    },[dispatch,show])
     
    const {books} = useSelector(state => state.getAllBookReducer)
    
@@ -23,7 +23,7 @@ const AllBook = () => {
   const  userBranch  =  currentUser.user.branch ;
   const userName = currentUser.user.name ;
   
-let filterBook22 = all_IssuedBook && all_IssuedBook.filter(book=> book.userId == userId);
+let filterBook22 = all_IssuedBook && all_IssuedBook.filter(book=> book.userId === userId);
 let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
 
     
@@ -124,7 +124,8 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
               <td style={{color:"red"}}>
                  
                   {currentUser.user.isAdmin && (
-                      <i className='fa fa-trash m-1' onClick={()=> console.log("okk")}></i>
+                    //   <i className='fa fa-trash m-1' onClick={()=> console.log("okk")}></i>
+                     <button className="btn btn-danger"  onClick={() => dispatch(removeABook(book._id))}>Remove</button>
                   )}
                   {!currentUser.user.isAdmin && (
                       <button  onClick={() => postData(book)} className={`btn btn-success`}>Issue</button>
