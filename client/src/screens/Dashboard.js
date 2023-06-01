@@ -4,7 +4,6 @@ import {Switch,Route} from "react-router-dom";
 import AddBook from "./AddBook"
 import AllBook from "./AllBook"
 import AllStudent from "./AllStudent"
-import IssueRequest from "./IssueRequest"
 import UserHome from "../components/UserHome"
 import UserIssuedBook from "./UserIssuedBook"
 import AllIssuedBook from "./AllissuedBook"
@@ -32,9 +31,7 @@ const Dashboard = () => {
                 <Route path="/dashboard/manageStudent" component={AllStudent} exact />
                 <Route path="/dashboard/issuedBook" component={UserIssuedBook} exact /> 
                 <Route path="/dashboard/allissuedBook" component={AllIssuedBook} exact /> 
-                
-                <Route path="/dashboard/stuReqIssue" exact component={IssueRequest} />
-                
+                            
                 <Route path="/dashboard/issue_return" exact component={IssueReturn} />
             
             </Switch>  

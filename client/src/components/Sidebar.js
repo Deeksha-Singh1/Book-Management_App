@@ -29,9 +29,6 @@ const Sidebar = () => {
                        <li> <i className="fas fa-users text-white"></i> 
                        <Link  to="/dashboard/manageStudent"   style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Manage Students </Link>  </li>
                        <hr style={{color:"white"}} />
-                       <li> <i className="fas fa-registered text-white"></i> 
-                       <Link  to="/dashboard/stuReqIssue"   style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Issue Request </Link>  </li>
-                       <hr style={{color:"white"}} />
                       
                        <li> <i className="fas fa-book text-white"></i> <Link  to="/dashboard/allissuedBook" 
                          style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> All Issued Book </Link>  </li>
