@@ -16,3 +16,8 @@ Features
 
 
 source code: https://drive.google.com/drive/folders/1EUSWRaMAuqteTLHITq7cfTf8trorE39Q?usp=sharing
+
+
+Credentials for admin : 
+id: 123456
+password: 123456
