@@ -17,7 +17,7 @@ const IssueRequest = () => {
 
     return (
         <div className="col-md-10 m-auto">
-             <p style={{fontFamily:"sans-serif",fontSize:"30px",textAlign:"center",padding:"10px"}}>Student Requested to Admin to issue these Book</p>
+             <p style={{fontFamily:"sans-serif",fontSize:"30px",textAlign:"center",padding:"10px"}}>Student Requested to Admin to issue these Books</p>
             <table  className='table table-bordered table-responsive-sm'>
 
 

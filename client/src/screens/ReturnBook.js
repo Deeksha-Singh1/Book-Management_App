@@ -31,7 +31,7 @@ const ReturnBook = () => {
         
         </> : 
         <>
-          <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"wheat"}}>Today Returned Book</h4>
+          <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"wheat"}}>Today's Returned Book</h4>
           <table  className='table table-bordered table-responsive-sm'>
 
 <thead className='thead-dark bg-info' style={{color:"white"}}>
@@ -48,7 +48,7 @@ const ReturnBook = () => {
 {filterd && filterd.map(book=>{
 
  
- return <tr key={book._id} style={{color:'whitesmoke'}}>
+ return <tr key={book._id} style={{color:'whiteSmoke'}}>
       <td style={{textAlign:"center"}}>{book.title}</td>
       <td style={{textAlign:"center"}}>
           {book.author}

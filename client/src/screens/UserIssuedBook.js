@@ -57,7 +57,7 @@ dayDiff = days
         <div className="col-md-10 m-auto pt-4">
           {!issuedBook.length  ? <>
           <div className="bg-success p-2 text-center">
-          <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"white"}}>Yet you haven't Issued Book</h4>
+          <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"white"}}>You haven't any Issued Books</h4>
           </div>
           
           </> : 
@@ -65,7 +65,7 @@ dayDiff = days
             <h4 style={{textAlign:"center",fontFamily:"sans-serif", color:"wheat"}}>My Issued Book</h4>
             <table  className='table table-bordered table-responsive-sm'>
 
-<thead className='thead-dark bg-info' style={{color:"whitesmoke"}}>
+<thead className='thead-dark bg-info' style={{color:"whiteSmoke"}}>
     <tr>
         <th style={{textAlign:"center"}}>Book</th>
         <th style={{textAlign:"center"}}>Author</th>
