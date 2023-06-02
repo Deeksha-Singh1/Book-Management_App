@@ -6,10 +6,7 @@
   padding-right: 5rem;
   padding-bottom: 10rem;
   border-radius: 4px;
-  background: #fff;
-  box-shadow: 10px 10px 20px rgba(222, 222, 230, 0.4),
-    -10px -10px 20px rgba(222, 222, 230, 0.8),
-    -8px 8px 30px rgba(222, 222, 230, 1);
+  background: rgb(200, 146, 121);
 }
 .container h1 {
   font-size: 2rem;
@@ -21,7 +18,7 @@
   color: #293241;
 }
 .container label {
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 .container input {

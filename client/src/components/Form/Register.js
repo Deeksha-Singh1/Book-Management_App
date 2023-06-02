@@ -53,11 +53,8 @@ const SignInForm = () => {
         return (
             
           <div className="container">
-              <div style={{marginLeft:"37%"}}>
-                        <div id="circle"></div>
-                          <h1  style={{color:"black",marginLeft:"44px",marginTop:"-70px",fontSize:"45px"}}>LMS</h1>
-                        </div>
-                        <p style={{color:"black",fontWeight:"800",textAlign:"center"}}>Welcome to Library
+            
+                        <p style={{color:"black",fontWeight:"800",textAlign:"center",fontSize:"25px"}}>Welcome to Library
 Management System</p>
           
             <Form>
@@ -134,7 +131,7 @@ Management System</p>
               </div>
 
               <div className="form-row">
-                <label htmlFor="year">admmission Year </label>
+                <label htmlFor="year">Admission Year </label>
                 <Field
                   type="number"
                   name="year"
