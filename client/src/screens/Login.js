@@ -53,7 +53,12 @@ const Login = () => {
                         Login
                     </button>
                     <br />
+                    <br />
                     <Link to="/register" style={{ fontFamily: "sans-serif", color: "white", textDecoration: "none" }}>Register Here</Link>
+
+                    <br />
+                    <br />
+                    <Link to="/" style={{ fontFamily: "sans-serif", color: "white", textDecoration: "none" }}>Go To Home Page</Link>
                 </div>
             </div>
         </div>
