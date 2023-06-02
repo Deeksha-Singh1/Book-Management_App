@@ -66,7 +66,8 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
     }
 
    const handleRemoveBook = (bookId) => {
-    if (window.confirm("Are you sure you want to remove the book?")) {
+    const confirmed = window.confirm('Do you want to remove this book?');
+    if (confirmed) {
       dispatch(removeABook(bookId));
       dispatch(getAllBook());
     }
@@ -87,10 +88,10 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
 
             {error && <div className="alert alert-danger"> You have already requested for this book </div>}
          
-           {    !books.length ?
-           <div style={{marginLeft:"40%",marginTop:"5%"}}>
-           <Spinner animation="border" variant="danger" />
-           </div>
+           { books.length ===0 ?
+           <div style={{ textAlign: 'center', marginTop: '20px' }}>
+           <h4>No books available</h4>
+         </div>
            
            : (
                <>
@@ -98,7 +99,7 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
                   <input type="text"  className="form-control" placeholder="search book by Name"  style
                   ={{height:"50px"}}
                   onChange={(e) => setSearchKey(e.target.value)} value={searchKey} />
-                  <button  onClick={() => dispatch(filterBook(searchKey))} className="btn btn-primary">Search  </button>
+                  <button  onClick={() => dispatch(filterBook(searchKey))} className="btn btn-primary">Search </button>
                   </div>
                   
                   <div className="col-md-10 m-auto">
