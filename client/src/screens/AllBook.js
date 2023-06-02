@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import {getAllBook,filterBook, removeABook} from "../actions/book_action"
 import {issueABook,getAllIssuedBook} from "../actions/Issue_action"
 import { useDispatch, useSelector } from 'react-redux'
-import {Toast,Spinner} from "react-bootstrap"
+import {Toast} from "react-bootstrap"
 
 const AllBook = () => {
     const dispatch = useDispatch() ;
