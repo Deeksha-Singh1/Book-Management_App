@@ -33,8 +33,7 @@ const Login = () => {
                         <div id="circle"></div>
                       
                         </div>
-                        <p style={{color:"white",fontWeight:"800",textAlign:"center"}}>Welcome to Library
-Management System</p>
+                        <p style={{color:"white",fontWeight:"800",textAlign:"center"}}>Welcome to Library Management System</p>
 <img src={StudentIMage} alt="StudentIMage" style={{height:"220px",width:"220px",borderRadius:"50%"}} />
                     <div style={{marginTop:"20px"}}>
                         <input type="text" className="form-control" style={{height:"60px",borderRadius:"20px"}}
@@ -42,7 +41,7 @@ Management System</p>
                     </div>
                     <br />
                     <div>
-                        <input type="text"  style={{height:"60px",borderRadius:"20px"}}
+                        <input type="password"  style={{height:"60px",borderRadius:"20px"}}
                         className="form-control"  placeholder="password"
                          value={password} onChange={(e) => setPassword(e.target.value)} />
                         <i className="fas fa-eye"  onClick={() =>  handleShow()}></i>

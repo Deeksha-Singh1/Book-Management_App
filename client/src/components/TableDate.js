@@ -11,7 +11,7 @@ const TableDate = ({book,fetchDataAgain}) => {
         var dayDiff ;
       
       if(book){
-        //dateFrom = moment(date + 7 * 24 * 3600 * 1000).format('YYYY-MM-DD');
+    
         var result = new Date(book.createdAt) ;
         result.setDate(result.getDate() + 7);
         dateFrom= result ;
@@ -48,9 +48,7 @@ const TableDate = ({book,fetchDataAgain}) => {
         <td>{<Moment format="YYYY-MM-DD">{dateFrom}</Moment>}</td>
         <td>{Math.floor(dayDiff) > 0 ?Math.floor(dayDiff) * 15 : 0 }</td>
         <td>
-             {/* <i className='fa fa-trash m-1' onClick={()=> console.log("okk")}></i>
-              <button onClick={() => console.log("")} className="btn btn-success">Renew</button> 
-              <button onClick={() => console.log("ok")} className="btn btn-danger ">Return </button> */}
+            
              <button onClick={() =>  clearIssuedBookqq(book._id)} className="btn btn-danger">Clear</button>
         </td>
 

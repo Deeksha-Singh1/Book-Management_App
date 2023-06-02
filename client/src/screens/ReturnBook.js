@@ -1,24 +1,23 @@
 
 import React,{useEffect} from 'react';
-import {getAllIssuedBook} from "../actions/Issue_action"
+import {getAllBookReturnReq} from "../actions/Issue_action"
 import { useDispatch, useSelector } from 'react-redux'
 import moment from 'moment';
 
-const Issue_Return = () => {
+const ReturnBook = () => {
 
     const dispatch = useDispatch();
       useEffect(()=>{
-        dispatch(getAllIssuedBook())
+        dispatch(getAllBookReturnReq())
       },[dispatch])
 
 
 
-    const {all_IssuedBook} = useSelector(state => state.allIssuedBookReducer)
+    const {returnbooks} = useSelector(state => state.getAllReturnBookReqReducer)
     var filterd;
     const filterOut = ()=>{
         const todayDate = moment(new Date()).format('YYYY-MM-DD');
-        //console.log(todayDate)
-         filterd = all_IssuedBook && all_IssuedBook.filter(item =>  (item.updatedAt.slice(0,10) === todayDate))
+         filterd = returnbooks && returnbooks.filter(item =>  (item.updatedAt.slice(0,10) === todayDate))
         
     }
 
@@ -27,12 +26,12 @@ const Issue_Return = () => {
         <div className="col-md-10 m-auto pt-4">
         {!filterd.length  ? <>
         <div className="bg-success p-2 text-center">
-        <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"white"}}>Yet No booked Issued Today</h4>
+        <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"wheat"}}> No booked Returned Today</h4>
         </div>
         
         </> : 
         <>
-          <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"wheat"}}>Today Issued Book</h4>
+          <h4 style={{textAlign:"center",fontFamily:"sans-serif",color:"wheat"}}>Today Returned Book</h4>
           <table  className='table table-bordered table-responsive-sm'>
 
 <thead className='thead-dark bg-info' style={{color:"white"}}>
@@ -49,7 +48,7 @@ const Issue_Return = () => {
 {filterd && filterd.map(book=>{
 
  
- return <tr key={book._id} style={{color:"white"}}>
+ return <tr key={book._id} style={{color:'whitesmoke'}}>
       <td style={{textAlign:"center"}}>{book.title}</td>
       <td style={{textAlign:"center"}}>
           {book.author}
@@ -77,4 +76,4 @@ const Issue_Return = () => {
     );
 };
 
-export default Issue_Return;
+export default ReturnBook;

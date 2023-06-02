@@ -34,7 +34,7 @@ const AdminLogin = () => {
                         <div id="circle"></div>
                          
                         </div>
-                        <p style={{color:"white",fontWeight:"800",textAlign:"center"}}>Welcome to Libary
+                        <p style={{color:"white",fontWeight:"800",textAlign:"center"}}>Welcome to Library
 Management System</p>
 
 
@@ -46,7 +46,7 @@ Management System</p>
                     </div>
                     <br />
                     <div>
-                        <input type="text"  style={{height:"60px",borderRadius:"20px"}}
+                        <input type="password"  style={{height:"60px",borderRadius:"20px"}}
                         className="form-control" placeholder="Password"
                          value={password} onChange={(e) => setPassword(e.target.value)} />
                         <i className="fas fa-eye"  onClick={() =>  handleShow()}></i>

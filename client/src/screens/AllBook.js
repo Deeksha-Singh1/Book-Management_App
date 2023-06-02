@@ -22,7 +22,7 @@ const AllBook = () => {
    const {currentUser} = useSelector(state => state.userLoginReducer)
    const userId = currentUser.user._id ;
   const  userBranch  =  currentUser.user.branch ;
-  const userName = currentUser.user.name ;
+  const userName = currentUser.user.name;
   
 let filterBook22 = all_IssuedBook && all_IssuedBook.filter(book=> book.userId === userId);
 let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
@@ -62,9 +62,15 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
         }
         setTimeout(()=>{
             setShow(false)
-        }, 5000)
-        // 
+        }, 5000)   
     }
+
+   const handleRemoveBook = (bookId) => {
+    if (window.confirm("Are you sure you want to remove the book?")) {
+      dispatch(removeABook(bookId));
+      dispatch(getAllBook());
+    }
+  };
 
     return (
         <div>
@@ -125,8 +131,9 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
               <td style={{color:"red"}}>
                  
                   {currentUser.user.isAdmin && (
-                    //   <i className='fa fa-trash m-1' onClick={()=> console.log("okk")}></i>
-                     <button className="btn btn-danger"  onClick={() =>  dispatch(removeABook(book._id))}>Remove</button>
+                      <button className="btn btn-danger" onClick={() => handleRemoveBook(book._id)}>
+                      Remove
+                    </button>
                   )}
                   {!currentUser.user.isAdmin && (
                       <button  onClick={() => postData(book)} className={`btn btn-success`}>Issue</button>

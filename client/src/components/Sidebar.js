@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom"
 import {logoutUser} from "../actions/user_action"
 import { useDispatch,useSelector } from 'react-redux';
-//import {userProfile} from "../actions/user_action"
+
 
 const Sidebar = () => {
    const dispatch = useDispatch();
@@ -23,16 +23,30 @@ const Sidebar = () => {
                 
                   {currentUser.user.isAdmin ? (
                       <>
-                       <li> <i className="fas fa-book text-white"></i> 
-               <Link  to="/dashboard/addBook"   style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Add Book </Link>  </li>
-               <hr style={{color:"white"}} />
+                        <li> <i className="fas fa-book text-white"></i> 
+                        <Link  to="/dashboard/addBook"   style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Add Book </Link>  </li>
+                        <hr style={{color:"white"}} />
+
                        <li> <i className="fas fa-users text-white"></i> 
                        <Link  to="/dashboard/manageStudent"   style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Manage Students </Link>  </li>
                        <hr style={{color:"white"}} />
-                      
+
+                       <li> <i className="fas fa-registered text-white"></i> 
+                       <Link  to="/dashboard/stuReqIssue"   style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Issue Request </Link>  </li>
+                       <hr style={{color:"white"}} />
+
                        <li> <i className="fas fa-book text-white"></i> <Link  to="/dashboard/allissuedBook" 
                          style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> All Issued Book </Link>  </li>
                        <hr style={{color:"white"}} />
+
+                       <li> <i className="fas fa-book text-white"></i> <Link  to="/dashboard/issue_return" 
+                         style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Today Issue Book </Link>  </li>
+                       <hr style={{color:"white"}} />
+
+                       <li> <i className="fas fa-book text-white"></i> <Link  to="/dashboard/returnBook" 
+                         style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Today Return Book </Link>  </li>
+                       <hr style={{color:"white"}} />
+                      
                     
                        
                        </>
@@ -40,12 +54,9 @@ const Sidebar = () => {
                   ): (
                     
                       <>
-                    {/* <li> <i className="fas fa-users"></i> 
-                    <Link  to="/dashboard/manageStudent"   style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px"}}> Borrowed Book</Link>  </li> */}
-                    {/* <hr style={{color:"white"}} /> */}
-                    
+                   
                     <li> <i className="fas fa-book text-white"></i> <Link  to="/dashboard/issuedBook" 
-                      style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Curently issued Book</Link>  </li>
+                      style={{textDecoration:"none",color:"#f1f1f1",fontSize:"20px",marginLeft:"5px",fontFamily:"Oswald"}}> Currently issued Book</Link>  </li>
                     <hr style={{color:"white"}} />
                     </>
                   )}

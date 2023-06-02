@@ -36,7 +36,6 @@ const AllStudent = () => {
         <td>{student.branch}</td>
         <td>{student.addmission_year}</td>
         <td>
-            {/* <i className='fa fa-trash m-1' onClick={()=> console.log("okk")}></i> */}
             <button className="btn btn-danger"  onClick={() => dispatch(removeAStudent(student._id))}>Remove</button>
         </td>
 
