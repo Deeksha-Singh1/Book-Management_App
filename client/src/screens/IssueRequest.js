@@ -48,8 +48,8 @@ const IssueRequest = () => {
        
         <td>
            
-             <button onClick={() => dispatch(issuedReq(book._id,book.bookId))} className="btn btn-success">Accepted</button> { "  "}
-             <button onClick={() => dispatch(issuedReqDeletedByAdmin(book._id))} className="btn btn-danger">Rejected</button>
+             <button onClick={() => dispatch(issuedReq(book._id,book.bookId))} className="btn btn-success">Accept</button> { "  "}
+             <button onClick={() => dispatch(issuedReqDeletedByAdmin(book._id))} className="btn btn-danger">Reject</button>
         </td>
 
     </tr>

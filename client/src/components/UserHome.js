@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { userProfile } from '../actions/user_action';
 import { useDispatch, useSelector } from 'react-redux';
-import Image from '../Images/userIcon.png';
+import Image from '../Images/userIcon.jpg';
 
 const UserHome = () => {
     const dispatch = useDispatch();
@@ -39,7 +39,7 @@ const UserHome = () => {
                                 <b>Branch:</b> {currentUser && currentUser[0] && currentUser[0].branch}
                             </p>
                             <p style={{ fontSize: '22px', marginBottom: '10px' }}>
-                                <b>Admission Year:</b> {currentUser && currentUser[0] && currentUser[0].admission_year}
+                                <b>Admission Year:</b> {currentUser && currentUser[0] && currentUser[0].addmission_year}
                             </p>
                         </>
                     )}
