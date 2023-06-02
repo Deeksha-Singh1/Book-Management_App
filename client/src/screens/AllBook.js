@@ -96,7 +96,7 @@ let newBooksId = filterBook22 && filterBook22.map(book=> book.bookId)
            : (
                <>
                   <div className="col-md-8 m-auto" style={{display:"flex"}}>
-                  <input type="text"  className="form-control" placeholder="search book by Name"  style
+                  <input type="text"  className="form-control" placeholder="Search book by Title"  style
                   ={{height:"50px"}}
                   onChange={(e) => setSearchKey(e.target.value)} value={searchKey} />
                   <button  onClick={() => dispatch(filterBook(searchKey))} className="btn btn-primary">Search </button>

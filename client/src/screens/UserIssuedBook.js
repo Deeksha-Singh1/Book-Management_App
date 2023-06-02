@@ -62,10 +62,10 @@ dayDiff = days
           
           </> : 
           <>
-            <h4 style={{textAlign:"center",fontFamily:"sans-serif"}}>My Issued Book</h4>
+            <h4 style={{textAlign:"center",fontFamily:"sans-serif", color:"wheat"}}>My Issued Book</h4>
             <table  className='table table-bordered table-responsive-sm'>
 
-<thead className='thead-dark bg-info'>
+<thead className='thead-dark bg-info' style={{color:"whitesmoke"}}>
     <tr>
         <th style={{textAlign:"center"}}>Book</th>
         <th style={{textAlign:"center"}}>Author</th>
