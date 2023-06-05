@@ -9,10 +9,6 @@ import UserHome from "../components/UserHome"
 import UserIssuedBook from "./UserIssuedBook"
 import AllIssuedBook from "./AllissuedBook"
 import Navbar from "../components/Navbar"
-import IssueReturn from "./Issue_Return";
-import ReturnBook from "./ReturnBook"
-
-
 
 const Dashboard = () => {
     return (
@@ -34,8 +30,7 @@ const Dashboard = () => {
                     <Route path="/dashboard/issuedBook" component={UserIssuedBook} exact /> 
                     <Route path="/dashboard/allissuedBook" component={AllIssuedBook} exact />                
                     <Route path="/dashboard/stuReqIssue" exact component={IssueRequest} />
-                    <Route path="/dashboard/issue_return" exact component={IssueReturn} />
-                    <Route path="/dashboard/returnBook" exact component={ReturnBook} />
+                    
                     </Switch>  
                   </div>
             </div>
