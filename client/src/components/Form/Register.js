@@ -11,8 +11,8 @@ import {registerUser} from "../../actions/user_action"
 const signInSchema = Yup.object().shape({
     name:Yup.string()
     .required("Name is required")
-    .min(3, "Password is too short - should be 3 chars minimum")
-    .max(15, "Password is too short - should be 15 chars minimum"),
+    .min(3, "Name is too short - should be 3 chars minimum")
+    .max(55, "Name is too short - should be 55 chars maximum"),
   email: Yup.string().email().required("Email is required"),
   password: Yup.string()
     .required("Password is required")
